@@ -1,12 +1,12 @@
 public class Car {
-    private static Person instance;
+    private static Car car;
     private static String azatsCar;
-    public static synchronized Person getInstance(){
-        if(instance == null){
-            instance = new Person();
+    public static synchronized Car getCar(){
+        if(car == null){
+            car = new Car();
             azatsCar = "Audi A7";
         }
-        return instance;
+        return car;
     }
 
     public String getAzatsCar(){

@@ -1,13 +1,13 @@
 
 public class Person {
-    private static Person instance;
+    private static Person person;
     private static String name;
-    public static synchronized Person getInstance(){
-        if(instance == null){
-            instance = new Person();
+    public static synchronized Person getPerson(){
+        if(person == null){
+            person = new Person();
             name = "Azat";
         }
-        return instance;
+        return person;
     }
 
     public String getName(){
